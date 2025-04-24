@@ -1,0 +1,34 @@
+{
+  "name": "databridgets",
+  "version": "1.0.0",
+  "description": "📦 DataBridgeTS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"env:example": "ts-node scripts/generate-env-example.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "amqplib": "^0.10.7",
+    "axios": "^1.8.4",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongodb": "^6.15.0",
+    "mysql2": "^3.14.0",
+    "webdav": "^5.8.0",
+    "zod": "^3.24.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "eslint": "^9.25.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.2.6",
+    "prettier": "^3.5.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
