@@ -1,18 +1,18 @@
-// Este é arquivo um tsconfig.json ideal para projetos Node.js com Express, estruturado para desenvolvimento moderno com boas práticas, incluindo suporte a ESModules, resolução de paths e geração de types.
+// Este arquivo é um tsconfig.json ideal para projetos Node.js com Express, estruturado para desenvolvimento moderno com boas práticas, incluindo suporte a ESModules, resolução de paths e geração de types.
 
 {
   "compilerOptions": {
-    "target": "ES2020",                       
-    "module": "CommonJS",                    
-    "rootDir": "./src",                      
-    "outDir": "./dist",                      
-    "strict": true,                          
-    "esModuleInterop": true,                 
+    "target": "ES2020",
+    "module": "CommonJS",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,                    
-    "moduleResolution": "node",             
-    "resolveJsonModule": true,              
-    "baseUrl": "./src",                     
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "baseUrl": "./src",
     "paths": {
       "@routes/*": ["routes/*"],
       "@controllers/*": ["controllers/*"],
