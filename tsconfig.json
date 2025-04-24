@@ -1,0 +1,38 @@
+// Este é arquivo um tsconfig.json ideal para projetos Node.js com Express, estruturado para desenvolvimento moderno com boas práticas, incluindo suporte a ESModules, resolução de paths e geração de types.
+
+{
+  "compilerOptions": {
+    "target": "ES2020",                       
+    "module": "CommonJS",                    
+    "rootDir": "./src",                      
+    "outDir": "./dist",                      
+    "strict": true,                          
+    "esModuleInterop": true,                 
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,                    
+    "moduleResolution": "node",             
+    "resolveJsonModule": true,              
+    "baseUrl": "./src",                     
+    "paths": {
+      "@routes/*": ["routes/*"],
+      "@controllers/*": ["controllers/*"],
+      "@services/*": ["services/*"],
+      "@utils/*": ["utils/*"],
+      "@models/*": ["models/*"],
+      "@config/*": ["config/*"]
+    },
+    "types": ["node", "express"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
+
+/*
+Explicando as principais opções:
+a. "target": "ES2020" – Suporte a recursos modernos do JS.
+b. "module": "CommonJS" – Compatível com Node.js.
+c. "rootDir" e "outDir" – Define onde estão os arquivos .ts e onde os .js compilados serão salvos.
+d. "esModuleInterop" – Permite usar import com pacotes baseados em require.
+e. "paths" – Facilita os imports relativos com aliases (@routes/..., etc).
+f. "types" – Garante os tipos adequados para Node e Express.
+*/
