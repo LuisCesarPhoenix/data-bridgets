@@ -12,9 +12,9 @@
     "url": "git+https://github.com/LuisCesarPhoenix/data-bridgets.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "Luis Cesar",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "env:example": "ts-node scripts/generate-env-example.ts"
@@ -22,15 +22,20 @@
   "dependencies": {
     "amqplib": "^0.10.7",
     "axios": "^1.8.4",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "module-alias": "^2.2.3",
     "mongodb": "^6.15.0",
     "mysql2": "^3.14.0",
     "webdav": "^5.8.0",
     "zod": "^3.24.3"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
+    "@types/module-alias": "^2.0.4",
     "@types/node": "^22.14.1",
     "eslint": "^9.25.0",
     "eslint-config-prettier": "^10.1.2",
