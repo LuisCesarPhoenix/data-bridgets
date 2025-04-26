@@ -53,11 +53,11 @@ Carrega as variáveis de ambiente do arquivo .env.
 */
 
 // Middlewares globais
-app.use(bodyParser.json());                    
+app.use(bodyParser.json());
 // Permite receber e tratar JSON no corpo das requisições
-app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(bodyParser.urlencoded({ extended: true }));
 // Permite receber dados de formulários
-app.use(cors());                               
+app.use(cors());
 // Libera requisições de outras origens
 
 app.use(express.json());
@@ -112,7 +112,7 @@ O que mudou do JavaScript para TypeScript:
 4. Arquivo renomeado para server.ts
 */
 
-/* 
+/*
 Melhorias aplicadas:
 a. Uso do sistema de módulos ES6 (import/export) com compatibilidade TypeScript.
 b. Tipagem explícita da aplicação com Application.
