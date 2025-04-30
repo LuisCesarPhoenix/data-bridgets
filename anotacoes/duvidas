@@ -1,0 +1,12 @@
+1.	O que é zod ou joi para tipagem?
+
+2.	O tipo EnvTypes em TypeScript garante tipagem 100% segura para suas variáveis de ambiente.
+
+3.	O que é um Workflow para quando for enviadas as atualizações para o Github, ele fazer os testes antes de fazer o merge com o main no Github?
+
+4.	O correto seria separar isso em módulos menores?
+Por exemplo: mysqlConfig, mongoConfig, jwtConfig, owncloudConfig?
+
+5.	Quando eu uso o o env.ts com validação por zod eu preciso do env.types.ts?
+
+6.	Como inserir comentários no package.json?
