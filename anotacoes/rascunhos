@@ -1,0 +1,4 @@
+1. A validação automática com zod evita que a aplicação inicie com variáveis ausentes ou inválidas.
+
+2. O tipo EnvTypes em TypeScript garante tipagem 100% segura para suas variáveis de ambiente.
+
