@@ -53,6 +53,10 @@ Carrega as variáveis de ambiente do arquivo .env.
 */
 
 // Middlewares globais
+<<<<<<< HEAD
+=======
+
+>>>>>>> 685c93e9ff3ce45128e6538750a203201e2afc42
 app.use(bodyParser.json());
 // Permite receber e tratar JSON no corpo das requisições
 app.use(bodyParser.urlencoded({ extended: true }));
