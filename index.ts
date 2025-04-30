@@ -1,8 +1,14 @@
 // index.ts
 // Arquivo principal que importa a configuração (app) do server.ts e inicializa o servidor sem abrir conexões.
 
-import app from './server'; 
+import app from './server';
 // Importa o objeto app do server.ts
+
+import dotenv from 'dotenv';
+// Importa o módulo dotenv para carregar variáveis de ambiente do arquivo .env
+
+dotenv.config();
+// Carrega as variáveis de ambiente do arquivo .env
 
 const PORT: number = parseInt(process.env.PORT || '3000', 10);
 // Define a porta onde o servidor vai rodar.
