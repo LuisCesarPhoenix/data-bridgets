@@ -1,34 +1,36 @@
 // scripts/generate-env-example.ts
 
 import fs from 'fs';
-//importa o módulo fs para trabalhar com arquivos no Node.js
+// Importa o módulo 'fs' para manipulação de arquivos no Node.js
+
 import path from 'path';
-//importa o módulo path para trabalhar com caminhos de arquivos
-import { envSchema } from '../src/config/env';
-//importa o schema de configuração envSchema do arquivo env.ts
+// Importa o módulo 'path' para lidar com caminhos de arquivos
+
+import { env } from '../src/config/env';
+// Importa o objeto 'env' que contém as variáveis de ambiente já tipadas
 
 const envExamplePath = path.resolve(__dirname, '../.env.example');
-// Define o caminho para o arquivo .env.example
-const parsedSchema = envSchema._def.shape();
-// Cria uma string vazia para armazenar o conteúdo do arquivo .env.example
+// Define o caminho absoluto para o arquivo .env.example na raiz do projeto
 
 let envExample = '';
+// Inicializa uma string vazia que irá armazenar o conteúdo do .env.example
 
-for (const key in parsedSchema) {
-  const def = parsedSchema[key]._def;
-  let defaultValue = '';
+for (const key in env) {
+  // Itera sobre cada chave presente no objeto 'env'
 
-  // Tentamos extrair o valor padrão se existir
-  if ('defaultValue' in def) {
-    defaultValue = def.defaultValue?.().toString();
-  }
+  const value = env[key as keyof typeof env];
+  // Recupera o valor correspondente à chave atual, garantindo o tipo correto
 
-  envExample += `${key}=${defaultValue}\n`;
+  envExample += `${key}=${value ?? ''}\n`;
+  // Adiciona a chave e seu valor ao conteúdo do .env.example (ou valor vazio se undefined)
 }
 
-// Escreve o conteúdo no .env.example
 fs.writeFileSync(envExamplePath, envExample.trim());
+// Escreve o conteúdo gerado no arquivo .env.example, removendo espaços extras no final
+
 console.log('✅ Arquivo .env.example gerado com sucesso!');
+// Exibe uma mensagem de sucesso no terminal
+
 
 /*
 Resumo do Fluxo do Código
