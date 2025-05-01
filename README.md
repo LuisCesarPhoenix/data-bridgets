@@ -37,7 +37,7 @@ Preparar o ambiente typescript:
 	https://nodejs.org/pt
 
 	Para ver a versão instalada digite o comando:
-	tsc --version
+	node --version
 
 2.	O PowerShell bloqueia a execução de scripts (como o npm.ps1) por padrão por motivos de segurança.
 	A sua política de execução (ExecutionPolicy) está como Restricted, o que impede o npm de rodar corretamente.
@@ -76,5 +76,3 @@ a.	Você libera apenas o seu usuário para rodar scripts seguros.
 b.	Você não está deixando o sistema inteiro vulnerável.
 c.	Vai conseguir instalar o TypeScript normalmente.
 
-Assistir a aula 5 e 6 do primeiro módulo: 
-https://www.youtube.com/watch?v=J-sMh3DF10U&list=PLb2HQ45KP0Wsk-p_0c6ImqBAEFEY-LU9H&index=6
