@@ -59,7 +59,7 @@ Preparar o ambiente typescript:
 
 3.	Depois disso, rode o seguinte comando para ele instalar o TypeScript globalmente (é preciso instalar o Node.js antes)
 	O comando abaixo instala o TypeScript de maneira global:
-	npm install -g typescript 
+	npm install -g typescript
 
 	Para ver a versão instalada digite o comando:
 	tsc --version
@@ -67,12 +67,43 @@ Preparar o ambiente typescript:
 4.	Na raiz do projeto digite o seguinte comando para ele criar o tsconfig.json:
 	npm --init
 
-5.	Se quiser voltar depois para o modo seguro (opcional):
+5.	Instale as dependências principais (express, dotenv, helmet) para usar pacotes como express, dotenv, helmet
+	Rode o seguinte comandos na pasta do projeto ou onde está o tsconfig.json:
+	npm install express dotenv helmet
+
+6.	Instale os tipos para desenvolvimento (@types/node, @types/express, @types/helmet):
+	npm install --save-dev @types/node @types/express @types/helmet
+
+7.	Execute npm audit fix para eliminar as vulnerabilidades restantes
+
+8.	Se quiser voltar depois para o modo seguro (opcional):
 	Se um dia quiser deixar como estava (super restrito), é só rodar:
 	Set-ExecutionPolicy Restricted -Scope CurrentUser
+
+Agora, seu ambiente está pronto para rodar os arquivos que usam express, dotenv e helmet com tipagem completa no TypeScript.
 
 Resumo do que você está fazendo:
 a.	Você libera apenas o seu usuário para rodar scripts seguros.
 b.	Você não está deixando o sistema inteiro vulnerável.
 c.	Vai conseguir instalar o TypeScript normalmente.
 
+
+Para transpilar o código do arquivo app.ts para JavaScript há duas opções:
+
+Certifique-se de que o TypeScript está pegando o tsconfig.json correto.
+o comando "tsc .\numberBigint.ts" ignora o tsconfig.json e transpila apenas o arquivo diretamente com as opções padrão.
+
+Opção 1 - Compile o arquivo usando o tsconfig.json com este comando:
+curso-typescript-zero-to-hero> tsc
+Ou:
+curso-typescript-zero-to-hero> tsc --project tsconfig.json
+Assim o TypeScript vai usar as opções corretas (como target: "ESNext") e vai compilar com suporte a BigInt.
+
+Para executar o arquivo app.js, execute o comando abaixo:
+curso-typescript-zero-to-hero\modulo-01\helloworld> node .\nome-do-arquivo.js
+
+Opção 2 - que é a recomendada, porém o arquivo tsconfig.json precisa ser criado na raiz do projeto:
+a.  curso-typescript-zero-to-hero> tsc --init (cria o arquivo tsconfig.json na raiz do projeto)
+b.  CTRL + SHIFT + B
+c.  Escolha a opção tsc: watch - tsconfig.json (ele vai transpilar os documentos em tempo de execução)
+d. 	Execute o comando: node .\nome-do-arquivo.js
